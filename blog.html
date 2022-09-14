@@ -14,72 +14,165 @@
         <h1 class="text-white text-center py-5">Some Frequent Questions</h1>
     </section>
 
-
+    <!-- Accordions Start -->
     <section>
+        <!-- question 01 -->
         <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Accordion Item #1
+                        What is the Difference Between Local Storage and Session Storage?
                     </button>
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
-                        the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    <div class="accordion-body"><strong> 1. Local Storage</strong>
+                        <br>
+                        a) The storage capacity of local storage is 5MB/ <br>
+                        b) As it is not session-based, it must be deleted via javascript or<br>
+                        c) The client can only read local storage <br>
+                        d) There is no transfer of data to the server
+                        <br>
+                        <strong>2. Session Storage</strong>
+                        <br>
+                        a) The storage capacity of session storage is 5MB <br>
+                        b) It’s session-based and works per window or tab. This means that data is stored only for the
+                        duration of a session, i.e., until the browser (or tab) is closed <br>
+                        c) The client can only read local storage <br>
+                        d) There is no transfer of data to the server
+                    </div>
                 </div>
             </div>
+            <!-- question 02 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Accordion Item #2
+                        Global scope vs Block scope:-
                     </button>
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
-                        the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine
-                        this being filled with some actual content.</div>
+                    <div class="accordion-body">
+                        <strong>Block Scope</strong><br>
+                        Block scope is also a sub-type of local scope. The block scope can be defined as the scope of
+                        the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or
+                        conditional statements, or something else. You are only allowed to refer to these variables from
+                        within the curly brackets {}. <br>
+                        Imagine a nested situation:
+                        A block of code enclosed with curly brackets{} containing some block variables. <br> <code>{<br>
+                            let a = 10;<br>
+                            const b = 5;<br>
+                          }</code> <br>
+
+                        <strong>Global Scope</strong> <br>
+                        The variables defined outside of any function or curly brackets are known as global variables
+                        and have global scope. Global scope means that the variables can be accessed from any part of
+                        that program, any function or conditional state can access that variable. <br> For example <br>
+                        <code>
+                            var name = "linuxHint";
+<br>
+                            function printName(){<br>
+                            // the variable can be accessed inside here 
+                           <br> console.log("This tutorial is by "+name);<br>
+                            } <br>
+                            
+                            printName();
+                        </code>
+                    </div>
                 </div>
             </div>
+            <!-- question 03 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Accordion Item #3
+                        How JavaScript Event Loops Work?
                     </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
-                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
-                        exciting happening here in terms of content, but just filling up the space to make it look, at
-                        least at first glance, a bit more representative of how this would look in a real-world
-                        application.</div>
+                    <div class="accordion-body">JavaScript is a single-threaded language. In other words, it can do only
+                        one thing at a time. JavaScript executes all operations on a single thread, but using a few
+                        smart data structures, gives us the illusion of multi-threading. The event loop is the secret
+                        behind JavaScript’s asynchronous programming.
+                        <br>
+
+                        <strong>Behind the Scenes — How does the magic happen..!!</strong>
+
+                        <br>Javascript has a few interesting data structures that help it in appearing like a
+                        multi-threaded
+                        language.b
+
+                        <br>1 — Call Stack
+
+                        <br>As the execution proceeds line by line, the method calls are pushed onto the call stack in
+                        order
+                        of execution. Once the execution is complete, the method is popped from the stack.
+
+                        <br>2 — Memory Heap
+
+                        <br>Objects are allocated in a heap which is just a name to denote a large (mostly unstructured)
+                        region of memory.
+
+                        <br>3 — Event/Callback Queue
+
+                        <br>The event queue is responsible for sending new functions to the track for processing. It
+                        follows
+                        the queue data structure to maintain the correct sequence in which all operations should be sent
+                        for execution.
+
+                        <br> At some point during the event loop, the runtime starts handling the messages on the queue,
+                        starting with the oldest one. To do so, the message is removed from the queue and its
+                        corresponding function is called with the message as an input parameter. As always, calling a
+                        function creates a new stack frame for that function’s use.
+
+                        <br> Whenever an async function is called, it is sent to a browser API. These are APIs built
+                        into the
+                        browser. Based on the command received from the call stack, the API starts its own
+                        single-threaded operation.
+
+
+                    </div>
                 </div>
             </div>
 
+            <!-- question 04 -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                        Accordion Item #4
+                        How undefined we get in JavaScript?
                     </button>
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate
-                        the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more
-                        exciting happening here in terms of content, but just filling up the space to make it look, at
-                        least at first glance, a bit more representative of how this would look in a real-world
-                        application.</div>
+                    <div class="accordion-body"> <strong>Strict equality and undefined</strong>
+                        <br>You can use undefined and the strict equality and inequality operators to determine whether
+                        a
+                        variable has a value.
+                        <br><strong>typeof operator and undefined</strong>
+                        <br><code>let x;
+                            <br>if (typeof x === 'undefined') {
+                            <br>  // these statements execute
+                           <br> }</code>
+                        <br><strong>void operator and undefined</strong>
+                        <br><code>let x;
+                            <br>if (x === void 0) {
+                                <br>  //  these statements execute
+                              <br>  }
+                            
+                            <br> //  y has not been declared before
+                            <br> if (y === void 0) {
+                                <br>   //  throws Uncaught ReferenceError: y is not defined
+                           <br> }</code>
+                    </div>
                 </div>
             </div>
         </div>
 
-
+        <!-- Accordions End -->
     </section>
 
 
